@@ -10,17 +10,18 @@ fi
 username=$1
 
 # Token de acceso personal
-token="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"
+token="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"
 
-# Clonar el repositorio
-git clone https://github.com/$username/nombre_del_repositorio.gif
+git config --global user.email "int.marisma@gmail.com"
+git config --global user.name "intmarisma"
 
-# Agregar los archivos de ejercicios
-cd /home/pcboot/Documentos/t1a2
-cp /home/pcboot/Documentos/t1a2/*.sh .
+cd /home/pcboot/Documentos/prueba
+cd /home/pcboot/documentos/prueba/*.sh .
 
-# hacer commit y push
 git add .
 git commit -m "Agregar archivos .sh de la actividad"
-git push origin master
+git push -u origin master
+
+git remote set-url origin https://github.com/$username/prueba.gif
+git push -u origin master
 
